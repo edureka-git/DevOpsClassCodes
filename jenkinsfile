@@ -1,0 +1,9 @@
+node {
+   stage('scm checkout'){
+       git 'https://github.com/narendra311777/DevOpsClassCodes.git'
+       }
+       stage('build-package'){
+         def mvnHome= tool name: 'M2'
+         sh "${mvnHome}/bin/mvn package"
+         }
+       }
