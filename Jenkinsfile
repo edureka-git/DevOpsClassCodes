@@ -17,9 +17,22 @@ pipeline {
                             branch "master"
                        }
                  }
+                          
                  steps {
                        echo "Hello"
                  }
+                          stage('compile'){
+        script{
+            echo "compiling the code"
+            sh "${mvnCMD} compile"
+        }
+    }
+    stage('package'){
+        script{
+            echo "package the code"
+            sh "${mvnCMD} package"
+        }
+        }
                  }
          }
 }
