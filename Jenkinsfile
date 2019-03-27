@@ -6,7 +6,6 @@ pipeline {
                      echo 'Hi, this is Zulaikha from edureka'
                  }
                  }
-                  stages {
                  stage('ten') {
                  steps {
                      echo 'Hi, this is Neeraj from RSystems'
