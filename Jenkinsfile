@@ -8,7 +8,6 @@ pipeline {
         stage('Compile') { 
             steps { 
                 echo "Compiling the code."
-                def mvnCMD= "${mvnHome}/bin/mvn"
                 sh "${mvnCMD} compile" 
                 
             }
@@ -16,7 +15,6 @@ pipeline {
      stage('package') {
          steps{
          echo "packaging the code"
-         def mvnCMD= "${mvnHome}/bin/mvn"
          sh "${mvnCMD} package"       
 }
      }
