@@ -8,7 +8,7 @@ pipeline {
                  }
                  stage('ten') {
                  steps {
-                     echo 'Hi, this is Neeraj from RSystems'
+                     echo 'Hi, this is Neeraj'
                  }
                  }
                  stage('Two') {
