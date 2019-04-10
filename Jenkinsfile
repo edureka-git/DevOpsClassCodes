@@ -1,31 +1,20 @@
-pipeline {
-         agent any
-         stages {
-                 stage('One') {
-                 steps {
-                     echo 'Hi, this is Zulaikha from edureka'
-                 }
-                 }
-                 stage('ten') {
-                 steps {
-                     echo 'Hi, this is Neeraj'
-                 }
-                 }
-                 stage('Two') {
-                 steps {
-                    input('Do you want to proceed?')
-                 }
-                 }
-                 stage('Three') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
-                          
-                 steps {
-                       echo "Hello"
-                 }
-                 }
-         }
+pipeline { 
+    agent any
+    env.JAVA_HOME= tool name: 'java', type: 'jdk'
+    
+    def mvnHome= tool name: 'maven', type: 'maven'
+
+    def mvnCMD= "${mvnHome}/bin/mvn" 
+    stages { 
+        stage('Compile') { 
+            steps { 
+               echo "Compiling the code."
+                sh "${mvnCMD} compile" 
+            }
 }
+     stage('package') {
+         echo "packaging the code"
+         sh "${mvnCMD} package"       
+}
+
+    }
