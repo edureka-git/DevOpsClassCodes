@@ -10,6 +10,7 @@ pipeline {
         stage('Compile') { 
             steps { 
                 echo "Compiling the code."
+                echo "first step"
                 sh "${mvnCMD} compile" 
                 
             }
