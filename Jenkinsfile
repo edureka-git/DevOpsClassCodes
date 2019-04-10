@@ -2,6 +2,8 @@ pipeline {
     agent any
     environment {
     JAVA_HOME= tool name: 'java', type: 'jdk'
+    def mvnHome= tool name: 'maven', type: 'maven'
+    def mvnCMD= "${mvnHome}/bin/mvn"
 }   
    
     stages { 
