@@ -14,10 +14,12 @@ pipeline {
             }
 }
      stage('package') {
+         steps{
          echo "packaging the code"
          def mvnCMD= "${mvnHome}/bin/mvn"
          sh "${mvnCMD} package"       
 }
+     }
 
     }
 }
