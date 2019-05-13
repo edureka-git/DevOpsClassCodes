@@ -1,6 +1,5 @@
-Addressbook Tutorial
+Addressbook 
 ====================
-This file for user to read steps.
 This tutorial teaches you some of the basic concepts in [Vaadin Framework](https://vaadin.com). It is meant to be
 a fast read for learning how to get started - not an example on how application should be
 designed. Please note this example uses and requires Java 8 to work.
@@ -17,7 +16,7 @@ $ mvn jetty:run
 
 Open [http://localhost:8080/](http://localhost:8080/)
 
-
+l;lll
 Importing in IntelliJ IDEA 14
 --------------------
 These instructions were tested on IntelliJ IDEA 14 CE. You can get it from https://www.jetbrains.com/idea/
@@ -36,6 +35,7 @@ You should now have a Jetty server running on localhost:8080. Navigate to http:/
 Importing in NetBeans 8
 --------------------
 These instructions were tested on NetBeans 8.0.2. You can get it from https://www.netbeans.org
+111
 
 To checkout and run the project in NetBeans, do:
 - Team -> Git -> Clone
