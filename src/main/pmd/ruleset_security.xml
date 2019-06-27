@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<ruleset name="Rule Set  - Security"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  <description>These rules check the security guidelines from Sun, published at http://java.sun.com/security/seccodeguide.html#gcg</description>
+
+
+<!-- Priorities 
+HIGH :1
+MEDIUM_HIGH:2           
+MEDIUM:3           
+MEDIUM_LOW:4
+LOW : 5    
+-->  
+<rule ref="rulesets/java/sunsecure.xml/MethodReturnsInternalArray"> <priority>3</priority></rule>
+<rule ref="rulesets/java/sunsecure.xml/ArrayIsStoredDirectly"> <priority>3</priority></rule>
+</ruleset>

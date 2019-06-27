@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<ruleset name="Rule Set  - Basics of Java"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  <description>These are the rules by which Applications will be built.   </description>
+
+
+<!-- Priorities 
+HIGH :1
+MEDIUM_HIGH:2           
+MEDIUM:3           
+MEDIUM_LOW:4
+LOW : 5    
+Rule sets used as base:      
+<ruleset>rulesets/java/codesize.xml</ruleset>
+<ruleset>rulesets/java/imports.xml</ruleset>
+<ruleset>rulesets/java/basic.xml</ruleset>
+<ruleset>rulesets/java/unnecessary.xml</ruleset>
+<ruleset>rulesets/java/empty.xml</ruleset>
+<ruleset>rulesets/java/unusedcode.xml</ruleset>
+<ruleset>rulesets/java/strings.xml </ruleset>
+<ruleset>rulesets/java/design.xml</ruleset>
+-->  
+<rule ref="rulesets/java/codesize.xml/NPathComplexity" message="The method {0}() has an NPath complexity of {1}. Recommended to have it less than 150"> <priority>3</priority></rule>
+<rule ref="rulesets/java/codesize.xml/ExcessiveMethodLength"><priority>3</priority></rule>
+<rule ref="rulesets/java/codesize.xml/ExcessiveParameterList"><priority>3</priority></rule>
+<rule ref="rulesets/java/codesize.xml/ExcessiveClassLength"><priority>3</priority></rule>
+<rule ref="rulesets/java/codesize.xml/ExcessivePublicCount"><priority>3</priority></rule>
+<rule ref="rulesets/java/codesize.xml/TooManyFields"><priority>3</priority></rule>
+<rule ref="rulesets/java/codesize.xml/TooManyMethods"><priority>3</priority></rule>
+<rule ref="rulesets/java/imports.xml/DuplicateImports"><priority>5</priority></rule>
+<rule ref="rulesets/java/imports.xml/DontImportJavaLang"><priority>5</priority></rule>
+<rule ref="rulesets/java/imports.xml/UnusedImports"><priority>5</priority></rule>
+<rule ref="rulesets/java/imports.xml/ImportFromSamePackage" message="Do not import objects that are in the same package"><priority>3</priority></rule>
+<rule ref="rulesets/java/imports.xml/UnnecessaryFullyQualifiedName"><priority>5</priority></rule>
+<rule ref="rulesets/java/basic.xml/JumbledIncrementer"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/ForLoopShouldBeWhileLoop"><priority>5</priority></rule>
+<rule ref="rulesets/java/basic.xml/DoubleCheckedLocking"><priority>1</priority></rule>
+<rule ref="rulesets/java/basic.xml/ReturnFromFinallyBlock"><priority>2</priority></rule>
+<rule ref="rulesets/java/basic.xml/UnconditionalIfStatement"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/BooleanInstantiation"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/CollapsibleIfStatements"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/ClassCastExceptionWithToArray"><priority>2</priority></rule>
+<rule ref="rulesets/java/basic.xml/AvoidDecimalLiteralsInBigDecimalConstructor"><priority>2</priority></rule>
+<rule ref="rulesets/java/basic.xml/MisplacedNullCheck"><priority>2</priority></rule>
+<rule ref="rulesets/java/basic.xml/BrokenNullCheck"><priority>2</priority></rule>
+<rule ref="rulesets/java/basic.xml/AvoidUsingHardCodedIP"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/CheckResultSet"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/AvoidBranchingStatementAsLastInLoop"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/DontCallThreadRun"><priority>3</priority></rule>
+<rule ref="rulesets/java/basic.xml/DontUseFloatTypeForLoopIndices"><priority>3</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UnnecessaryConversionTemporary"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UnnecessaryReturn"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UnnecessaryFinalModifier"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UselessOverridingMethod"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UselessOperationOnImmutable"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UnusedNullCheckInEquals"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/unnecessary.xml/UselessParentheses"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyCatchBlock" ><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyIfStmt"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyWhileStmt"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyTryBlock" ><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyFinallyBlock"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptySwitchStatements"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptySynchronizedBlock"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyStatementNotInLoop"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyInitializer"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyStatementBlock"><priority>5</priority></rule>
+<rule deprecated="true" ref="rulesets/java/empty.xml/EmptyStaticInitializer"><priority>5</priority></rule>
+ <rule ref="rulesets/java/unusedcode.xml/UnusedLocalVariable"><priority>4</priority></rule>
+ <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod"><priority>4</priority></rule>
+ <rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/StringInstantiation"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/StringToString"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/InefficientStringBuffering"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/UnnecessaryCaseChange"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/AppendCharacterWithChar"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/ConsecutiveAppendsShouldReuse"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/ConsecutiveLiteralAppends"><priority>2</priority></rule>
+ <rule ref="rulesets/java/strings.xml/AvoidStringBufferField"><priority>2</priority></rule>
+ <rule ref="rulesets/java/strings.xml/UseEqualsToCompareStrings"><priority>2</priority></rule>
+ <rule ref="rulesets/java/strings.xml/UselessStringValueOf"><priority>3</priority></rule>
+ <rule ref="rulesets/java/strings.xml/InsufficientStringBufferDeclaration"><priority>2</priority></rule>
+ <rule ref="rulesets/java/design.xml/UseUtilityClass"><priority>4</priority></rule>
+<rule ref="rulesets/java/design.xml/SimplifyBooleanReturns"><priority>4</priority></rule>
+<rule ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/AvoidReassigningParameters"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/ConstructorCallsOverridableMethod"><priority>1</priority></rule>
+<rule ref="rulesets/java/design.xml/CloseResource"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/OptimizableToArrayCall"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/EqualsNull"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/InstantiationToGetClass"><priority>4</priority></rule>
+<rule ref="rulesets/java/design.xml/IdempotentOperations"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/SimpleDateFormatNeedsLocale"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/AssignmentToNonFinalStatic"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/AvoidSynchronizedAtMethodLevel"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/UseNotifyAllInsteadOfNotify"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/AvoidInstanceofChecksInCatchClause"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/CompareObjectsWithEquals"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/PositionLiteralsFirstInComparisons"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/NonThreadSafeSingleton"><priority>1</priority></rule>
+<rule ref="rulesets/java/design.xml/AvoidConstantsInterface"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/PreserveStackTrace"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/UseCollectionIsEmpty"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/SingularField"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/ReturnEmptyArrayRatherThanNull"><priority>2</priority></rule>
+<rule ref="rulesets/java/design.xml/UseVarargs"><priority>4</priority></rule>
+<rule ref="rulesets/java/design.xml/FieldDeclarationsShouldBeAtStartOfClass"><priority>3</priority></rule>
+<rule ref="rulesets/java/design.xml/GodClass"><priority>3</priority></rule>
+<rule ref="rulesets/java/logging-java.xml/MoreThanOneLogger"><priority>3</priority></rule>
+<rule ref="rulesets/java/logging-java.xml/LoggerIsNotStaticFinal"><priority>3</priority></rule>
+<rule ref="rulesets/java/logging-java.xml/SystemPrintln"><priority>2</priority></rule>
+<rule ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace"><priority>2</priority></rule>
+<rule ref="rulesets/java/comments.xml/CommentRequired"><priority>5</priority></rule>
+<rule ref="rulesets/java/comments.xml/CommentSize"><priority>5</priority></rule>
+</ruleset>
