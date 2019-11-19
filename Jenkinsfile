@@ -1,5 +1,8 @@
 pipeline { 
     agent any
+    options {
+    buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
+  }
     environment {
     JAVA_HOME= tool name: 'java', type: 'jdk'
     def mvnHome= tool name: 'maven', type: 'maven'
