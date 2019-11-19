@@ -2,7 +2,7 @@ pipeline {
     agent any
     options {
         disableConcurrentBuilds() 
-    buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
+    buildDiscarder(logRotator(numToKeepStr: '30', artifactDaysToKeepStr: '30'))
   }
     environment {
     JAVA_HOME= tool name: 'java', type: 'jdk'
