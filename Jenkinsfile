@@ -17,7 +17,8 @@ pipeline {
             }
             steps { 
                 echo "Compiling the code."
-                sh "${mvnCMD} compile" 
+                //sh "${mvnCMD} compile" 
+                system.exit (0)
                 
             }
 }
@@ -25,7 +26,8 @@ pipeline {
      stage('package') {
          steps{
          echo "packaging the code"
-         sh "${mvnCMD} package"       
+         //sh "${mvnCMD} package"  
+             
 }
      }
 
