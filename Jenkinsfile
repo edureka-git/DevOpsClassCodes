@@ -12,9 +12,9 @@ pipeline {
    
     stages { 
         stage('Compile') { 
-            options {
-            timeout(time: 1, unit: 'SECONDS')
-            }
+           // options {
+            //timeout(time: 1, unit: 'SECONDS')
+            //}
             steps { 
                 echo "Compiling the code."
                 //sh "${mvnCMD} compile" 
