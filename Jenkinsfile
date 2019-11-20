@@ -5,9 +5,9 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '30', daysToKeepStr: '30'))
   }
     environment {
-    JAVA_HOME= tool name: 'java', type: 'jdk'
-    def mvnHome= tool name: 'maven', type: 'maven'
-    def mvnCMD= "${mvnHome}/bin/mvn"
+    //JAVA_HOME= tool name: 'java', type: 'jdk'
+    //def mvnHome= tool name: 'maven', type: 'maven'
+    /def mvnCMD= "${mvnHome}/bin/mvn"
 }   
    
     stages { 
