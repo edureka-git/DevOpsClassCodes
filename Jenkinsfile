@@ -18,7 +18,7 @@ pipeline {
             steps { 
                 echo "Compiling the code."
                 //sh "${mvnCMD} compile" 
-                exit 0
+                sh "exit 0"
                 
             }
 }
