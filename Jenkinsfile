@@ -23,7 +23,7 @@ pipeline{
           }
            stage('MetricCheck'){
               steps{
-                  sh 'mvn coberrura:cobertura -Dcobertura.report.format=xml'
+                  sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
               }
           }
           stage('Package'){
