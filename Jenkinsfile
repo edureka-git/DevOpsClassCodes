@@ -11,6 +11,21 @@ pipeline{
                   sh 'mvn compile'
               }
           }
+           stage('CodeReview'){
+              steps{
+                  sh 'mvn pmd:pmd'
+              }
+          }
+           stage('UnitTest'){
+              steps{
+                  sh 'mvn test'
+              }
+          }
+           stage('MetricCheck'){
+              steps{
+                  sh 'mvn coberrura:cobertura -Dcobertura.report.format=xml'
+              }
+          }
           stage('Package'){
               steps{
                   sh 'mvn package'
