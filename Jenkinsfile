@@ -3,16 +3,18 @@ pipeline{
         jdk 'myjava'
         maven 'mymaven'
     }
-    agent any
+    agent none
     stages{
         stage('Checkout'){
+            agent {label 'win_slave'}
             steps{
                 git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
             }
         }
         stage('Compile'){
+            agent {label 'win_slave'}
             steps{
-                sh 'mvn compile'
+                bat 'mvn compile'
             }
         }
         stage('CodeReview'){
