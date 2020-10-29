@@ -90,6 +90,14 @@
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
+	    <!-- Allow for unresolved dependencies at specified path /usr/lib/jvm/java-11-openjdk-amd64/../lib/tools.jar -->
+	<dependency>
+            <groupId>com.sun</groupId>
+            <artifactId>tools</artifactId>
+            <version>1.6.0</version>
+            <scope>system</scope>
+            <systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
+        </dependency>
 		
 				<!-- LOGGING -->
 		<dependency>
