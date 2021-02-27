@@ -9,6 +9,7 @@ pipeline{
            stage('Checkout'){
                agent any
                steps{
+		 echo 'cloning..'
                  git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
               }
           }
