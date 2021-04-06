@@ -23,6 +23,7 @@ pipeline{
           stage('CodeReview'){
               agent any
               steps{
+		  echo 'codeReview'
                   sh 'mvn pmd:pmd'
               }
           }
