@@ -17,7 +17,7 @@ pipeline{
               agent any
               steps{
                   echo 'compiling..'
-                  sh 'mvn compile1'
+                  sh 'mvn compile'
               }
              post {
                success {
