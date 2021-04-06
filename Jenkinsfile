@@ -19,6 +19,16 @@ pipeline{
                   echo 'compiling..'
                   sh 'mvn compile1'
               }
+             post {
+               success {
+                  echo 'Job executed succesfully'
+               }
+		     failure{
+			     echo ' failed due to exit code 1'
+		     }
+		     unstable{
+			     echo ' build unstable'
+           }
           }
           stage('CodeReview'){
               agent any
