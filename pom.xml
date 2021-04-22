@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/                                                                                        2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.or                                                                                        g/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.edurekademo.tutorial</groupId>
     <artifactId>addressbook</artifactId>
@@ -21,8 +21,8 @@
             <name>Vaadin Pre-releases</name>
             <url>https://maven.vaadin.com/vaadin-prereleases</url>
         </repository>
-        <!-- Essential Vaadin artifacts are in maven central, but maven.vaadin.com 
-            contains a huge set of additional libraries. See vaadin.com/directory -->
+        <!-- Essential Vaadin artifacts are in maven central, but maven.vaadin.c                                                                                        om
+            contains a huge set of additional libraries. See vaadin.com/director                                                                                        y -->
        <repository>
             <id>vaadin-addons</id>
             <url>http://maven.vaadin.com/vaadin-addons</url>
@@ -30,7 +30,7 @@
 
         <repository>
             <id>vaadin-snapshots</id>
-            <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+            <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/<                                                                                        /url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -43,7 +43,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>vaadin-snapshots</id>
-            <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+            <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/<                                                                                        /url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -81,81 +81,81 @@
             <version>3.0.1</version>
             <scope>compile</scope>
         </dependency>
-        <!-- The huge set of awesome Java libraries are available as such 
-            for Vaadin developers, you should take the advantage of those. In this app 
-            we just use the commons-beanutils to help implementing the fake backend. -->
+        <!-- The huge set of awesome Java libraries are available as such
+            for Vaadin developers, you should take the advantage of those. In th                                                                                        is app
+            we just use the commons-beanutils to help implementing the fake back                                                                                        end. -->
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
-		
-				<!-- LOGGING -->
-		<dependency>
-	<groupId>log4j</groupId>
-	<artifactId>log4j</artifactId>
-	<version>1.2.9</version>
+
+                                <!-- LOGGING -->
+                <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.9</version>
 </dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.7</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.7</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.7</version>
-		</dependency>
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
 
-				<!-- TESTING -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<!-- COMMONS -->
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-		<!-- JSON -->
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20140107</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-jaxrs</artifactId>
-			<version>1.9.4</version>
-		</dependency>
-
-		<!-- XML -->
-		<dependency>
-			<groupId>com.sun.xml.security</groupId>
-			<artifactId>xml-security-impl</artifactId>
-			<version>1.0</version>
-		</dependency>
+                                <!-- TESTING -->
+                <dependency>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>4.7</version>
+                        <scope>test</scope>
+                </dependency>
 
 
-		</dependencies>
+                <!-- COMMONS -->
+                <dependency>
+                        <groupId>commons-httpclient</groupId>
+                        <artifactId>commons-httpclient</artifactId>
+                        <version>3.1</version>
+                </dependency>
+
+                <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-lang3</artifactId>
+                        <version>3.1</version>
+                </dependency>
+
+                <!-- JSON -->
+                <dependency>
+                        <groupId>org.json</groupId>
+                        <artifactId>json</artifactId>
+                        <version>20140107</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.codehaus.jackson</groupId>
+                        <artifactId>jackson-jaxrs</artifactId>
+                        <version>1.9.4</version>
+                </dependency>
+
+                <!-- XML -->
+                <dependency>
+                        <groupId>com.sun.xml.security</groupId>
+                        <artifactId>xml-security-impl</artifactId>
+                        <version>1.0</version>
+                </dependency>
+
+
+                </dependencies>
 
     <build>
         <plugins>
@@ -173,30 +173,30 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
             </plugin>
-			
-						<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
-				<configuration>
-					<parallel>methods</parallel>
-					<threadCount>10</threadCount>
-					<includes>
-						<include>**/Test*.java</include>
-						<include>**/Test.java</include>
-						<include>**/TestCase.java</include>
-					</includes>
-					<excludes>
-						<exclude>**/*Abstract*Test.java</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
+
+                                                <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-surefire-plugin</artifactId>
+                                <version>2.19.1</version>
+                                <configuration>
+                                        <parallel>methods</parallel>
+                                        <threadCount>10</threadCount>
+                                        <includes>
+                                                <include>**/Test*.java</include>
+                                                <include>**/Test.java</include>
+                                                <include>**/TestCase.java</inclu                                                                                        de>
+                                        </includes>
+                                        <excludes>
+                                                <exclude>**/*Abstract*Test.java<                                                                                        /exclude>
+                                        </excludes>
+                                </configuration>
+                        </plugin>
 
         </plugins>
-		<finalName>addressbook</finalName>
+                <finalName>addressbook</finalName>
     </build>
-	
-	  
+
+
     <reporting>
     <plugins>
       <plugin>
@@ -206,7 +206,7 @@
       </plugin>
     </plugins>
   </reporting>
-  
+
       <profiles>
         <profile>
             <id>development</id>
@@ -231,7 +231,7 @@
                             <!--</dependency>-->
                         <!--</dependencies>-->
                         <!--<configuration>-->
-                            <!--<configLocation>custom-checkstyle.xml</configLocation>-->
+                            <!--<configLocation>custom-checkstyle.xml</configLoc                                                                                        ation>-->
                         <!--</configuration>-->
                     <!--</plugin>-->
 
@@ -298,7 +298,7 @@
                         <configuration>
                             <reportPlugins>
                                 <plugin>
-                                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                                    <artifactId>maven-project-info-reports-plugi                                                                                        n</artifactId>
                                     <version>2.7</version>
                                 </plugin>
                                 <plugin>
@@ -308,10 +308,10 @@
                                 </plugin>
                                 <plugin>
                                     <groupId>org.apache.maven.plugins</groupId>
-                                    <artifactId>maven-checkstyle-plugin</artifactId>
+                                    <artifactId>maven-checkstyle-plugin</artifac                                                                                        tId>
                                     <version>3.0.1</version>
                                     <!--<configuration>-->
-                                    <!--<configLocation>gol-checkstyle.xml</configLocation>-->
+                                    <!--<configLocation>gol-checkstyle.xml</conf                                                                                        igLocation>-->
                                     <!--</configuration>-->
                                 </plugin>
                                 <plugin>
@@ -327,12 +327,12 @@
                                         </rulesets>
                                         <!-- CPD options -->
                                         <minimumTokens>20</minimumTokens>
-                                        <ignoreIdentifiers>true</ignoreIdentifiers>
+                                        <ignoreIdentifiers>true</ignoreIdentifie                                                                                        rs>
                                     </configuration>
                                 </plugin>
                                 <plugin>
                                     <groupId>org.codehaus.mojo</groupId>
-                                    <artifactId>findbugs-maven-plugin</artifactId>
+                                    <artifactId>findbugs-maven-plugin</artifactI                                                                                        d>
                                     <version>2.4.0</version>
                                     <configuration>
                                         <effort>Max</effort>
@@ -340,12 +340,12 @@
                                     </configuration>
                                 </plugin>
                                 <plugin>
-                                    <artifactId>maven-javadoc-plugin</artifactId>
+                                    <artifactId>maven-javadoc-plugin</artifactId                                                                                        >
                                     <version>2.9.1</version>
                                     <configuration>
                                         <source>1.8</source>
                                         <doclet>
-                                            gr.spinellis.umlgraph.doclet.UmlGraphDoc
+                                            gr.spinellis.umlgraph.doclet.UmlGrap                                                                                        hDoc
                                         </doclet>
                                         <docletArtifact>
                                             <groupId>gr.spinellis</groupId>
@@ -353,7 +353,7 @@
                                             <version>4.6</version>
                                         </docletArtifact>
                                         <additionalparam>
-                                            -inferrel -inferdep -hide java.* -collpackages
+                                            -inferrel -inferdep -hide java.* -co                                                                                        llpackages
                                             java.util.* -attributes -operations
                                             -enumerations -enumconstants
                                         </additionalparam>
@@ -450,7 +450,7 @@
                         <artifactId>maven-checkstyle-plugin</artifactId>
                         <version>2.9.1</version>
                         <configuration>
-                            <configLocation>addressbook-build/checkstyle.xml</configLocation>
+                            <configLocation>addressbook-build/checkstyle.xml</co                                                                                        nfigLocation>
                         </configuration>
                     </plugin>
                     <plugin>
