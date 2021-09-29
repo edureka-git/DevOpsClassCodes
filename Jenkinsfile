@@ -7,28 +7,28 @@ pipeline{
     agent none
       stages{
            stage('Checkout'){
-               agent any
+	    agent {label 'Slave1'}
                steps{
 		 echo 'cloning..'
                  git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
               }
           }
           stage('Compile'){
-              agent any
+              agent {label 'Slave1'}
               steps{
                   echo 'compiling..'
                   sh 'mvn compile'
 	      }
           }
           stage('CodeReview'){
-              agent any
+              agent {label 'Slave1'}
               steps{
 		  echo 'codeReview'
                   sh 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
-		   agent any
+		   agent {label 'Slave1'}
               steps{
 	         
                   sh 'mvn test'
@@ -40,7 +40,7 @@ pipeline{
            }	
           }
            stage('MetricCheck'){
-               agent any
+               agent {label 'Slave1'}
               steps{
                   sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
               }
@@ -51,7 +51,7 @@ pipeline{
            }		
           }
           stage('Package'){
-              agent any
+              agent {label 'Slave1'}
               steps{
                   sh 'mvn package'
               }
