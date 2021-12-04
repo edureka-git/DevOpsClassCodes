@@ -5,7 +5,7 @@ mypipeline{
     }
     agent any
     stages{
-        stage('Checkout'){
+        stage('Checkout on git'){
             agent any
             steps{
                 git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
