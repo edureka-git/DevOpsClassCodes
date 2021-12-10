@@ -9,8 +9,6 @@ try {
 
 node{
  stage('Checkout') {
-Module 4 – Continuous Integration With Jenkins
-© B r a i n 4 c e E d u c a t i o n S o l u t i o n s P v t . L t d Page 3
  git 'https://github.com/edureka-git/DevOpsClassCodes'
 
  }
@@ -42,8 +40,6 @@ false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName:
  stage('clean up') {
  echo "cleaning up the workspace"
  cleanWs()
-Module 4 – Continuous Integration With Jenkins
-© B r a i n 4 c e E d u c a t i o n S o l u t i o n s P v t . L t d Page 4
  }
 }// node
 } // try end
