@@ -4,32 +4,32 @@ pipeline{
         jdk 'myjava'
         maven 'mymaven'
     }
-    agent none
+	agent {label 'linux_slave'}
       stages{
            stage('Checkout'){
-	    agent any
+	    
                steps{
 		 echo 'cloning..'
                  git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
               }
           }
           stage('Compile'){
-              agent any
+             
               steps{
                   echo 'compiling..'
                   sh 'mvn compile'
 	      }
           }
           stage('CodeReview'){
-		  agent {label 'linux_slave'}
+		  
               steps{
-		 git 'https://github.com/Sonal0409/DevOpsClassCodes.git'     
+		    
 		  echo 'codeReview'
                   sh 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
-		   agent any
+		  
               steps{
 	         
                   sh 'mvn test'
@@ -41,7 +41,7 @@ pipeline{
            }	
           }
            stage('MetricCheck'){
-               agent any
+              
               steps{
                   sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
               }
@@ -52,9 +52,9 @@ pipeline{
            }		
           }
           stage('Package'){
-		  agent {label 'linux_slave'}
+		  
               steps{
-		  git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
+		  
                   sh 'mvn package'
               }
           }
