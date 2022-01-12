@@ -21,8 +21,9 @@ pipeline{
 	      }
           }
           stage('CodeReview'){
-              agent any
+		  agent {label 'linux_slave'}
               steps{
+		 git 'https://github.com/Sonal0409/DevOpsClassCodes.git'     
 		  echo 'codeReview'
                   sh 'mvn pmd:pmd'
               }
@@ -51,8 +52,9 @@ pipeline{
            }		
           }
           stage('Package'){
-              agent any
+		  agent {label 'linux_slave'}
               steps{
+		  git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
                   sh 'mvn package'
               }
           }
