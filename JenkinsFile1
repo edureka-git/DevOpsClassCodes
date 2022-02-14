@@ -1,4 +1,4 @@
-making a chnage inpipeline{
+commit inpipeline{
     tools{
         jdk 'myjava'
         maven 'mymaven131'
