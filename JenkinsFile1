@@ -1,4 +1,4 @@
-new chnages inpipeline{
+making a chnage inpipeline{
     tools{
         jdk 'myjava'
         maven 'mymaven131'
