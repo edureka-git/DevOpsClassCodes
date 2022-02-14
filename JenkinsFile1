@@ -1,4 +1,4 @@
-added new chnage for jenkins inpipeline{
+new chnage for jenkins inpipeline{
     tools{
         jdk 'myjava'
         maven 'mymaven131'
