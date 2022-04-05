@@ -1,4 +1,4 @@
-new commit into  pipeline{
+new new new commit into  pipeline{
     tools{
         jdk 'myjava'
         maven 'mymaven131'
