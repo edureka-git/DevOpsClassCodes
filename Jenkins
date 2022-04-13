@@ -1,0 +1,51 @@
+pipeline{
+    
+    agent none
+    
+    stages{
+        
+        stage('checkout'){
+            agent any
+            steps{
+            git 'https://github.com/sanmj2109/DevOpsClassCodes.git'}
+        }
+        stage('compile')
+        {
+            agent any
+            steps{
+            sh 'mvn compile'}
+        }
+        stage('codeReview')
+        {
+            agent any
+            steps{
+            sh 'mvn pmd:pmd'}
+            
+        }
+        stage('UnitTest')
+        {
+           agent any
+           steps{
+            sh 'mvn test' }
+        }
+        stage('MetricCheck')
+        {
+            agent any
+            steps{
+            sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'}
+            
+            post{
+                always{
+                    cobertura coberturaReportFile : 'target/site/cobertura/coverage.xml'
+                }
+            }
+        }
+        stage('package')
+        {
+            agent any
+            steps{
+            sh 'mvn package'}
+        }
+    }
+    
+}
