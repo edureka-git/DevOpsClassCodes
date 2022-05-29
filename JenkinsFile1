@@ -3,6 +3,7 @@ new commit  pipeline{
         jdk 'myjava'
         maven 'mymaven131'
     }
+    //commit on github
     agent any
     stages{
         stage('Checkout on git'){
