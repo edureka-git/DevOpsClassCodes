@@ -5,6 +5,7 @@ new commit  pipeline{
     }
     //commit on github
     agent any
+    new ctsage added
     stages{
         stage('Checkout on git'){
             agent any
