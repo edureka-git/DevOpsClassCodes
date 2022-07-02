@@ -8,7 +8,7 @@ import java.net.URL
 try {
 
 node{
- stage('Checkout') {
+ stage('Checkout1') {
  git 'https://github.com/edureka-git/DevOpsClassCodes'
 
  }
