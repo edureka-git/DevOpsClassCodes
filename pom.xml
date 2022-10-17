@@ -420,7 +420,7 @@
                     <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.7</version>
+                <version>1.17</version>
                 <configuration>
                     <formats>
                         <format>xml</format>
