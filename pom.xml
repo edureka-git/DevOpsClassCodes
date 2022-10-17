@@ -424,6 +424,7 @@
                 <configuration>
                     <formats>
                         <format>xml</format>
+		        <format>html</format>
                     </formats>
                 </configuration>
                 <executions>
@@ -449,8 +450,7 @@
                             <!-- CPD options -->
                             <minimumTokens>20</minimumTokens>
                             <ignoreIdentifiers>true</ignoreIdentifiers>
-
-                        </configuration>
+			 </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
