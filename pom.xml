@@ -426,8 +426,15 @@
                         <format>xml</format>
 		        <format>html</format>
                     </formats>
+		    <reportSets>
+                        <reportSet>
+                           <reports>
+                            <report>cobertura</report>
+                           </reports>
+                        </reportSet>
+                    </reportSets>
                 </configuration>
-                <executions>
+		<executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
