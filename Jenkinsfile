@@ -11,7 +11,7 @@ pipeline {
             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/devopscbabu/DevOpsAddressBook.git']]])
             }
         }
-        stage('Build') {
+        stage('Compile') {
             steps {
             sh 'mvn clean compile'
             }
@@ -21,10 +21,10 @@ pipeline {
             sh 'mvn test'
             }
         }
-        stage('Package') {
-            steps {
-            sh 'mvn clean package'
-            }
-        }    
+//        stage('Package') {
+//            steps {
+//            sh 'mvn clean package'
+//            }
+//        }    
     }
 }
