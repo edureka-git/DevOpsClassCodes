@@ -13,9 +13,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-	    
-        </properties>
-   <properties>
+	   
        
             <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
             <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
