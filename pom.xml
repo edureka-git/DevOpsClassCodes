@@ -65,6 +65,11 @@
             <artifactId>vaadin-compatibility-shared</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
+	 <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.3.2</version>
+</dependency>
          <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-compatibility-client-compiled</artifactId>
