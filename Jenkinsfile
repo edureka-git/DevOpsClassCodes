@@ -3,6 +3,7 @@ pipeline {
     
     tools {
         maven 'M2_HOME'
+        terraform 'Terraform-1.3.7'
     }
 
     stages {
