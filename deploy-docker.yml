@@ -1,0 +1,35 @@
+---
+- hosts: dev
+  become: True
+  tasks:
+    - name: install python pip
+      apt:
+        name: python-pip
+        state: present 
+    
+    - name: Install docker with python module
+      pip:
+        name: docker-py
+        state: present
+    
+    - name: Install docker
+      apt:
+        name: docker
+        state: present
+    
+    - name: start docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+    
+    - name: docker run user
+      shell: usermod -a -G docker ubuntu
+    
+    - name: Start the container
+      docker_container:
+        name: project-app
+        image: "cbabu85/addressbook"
+        state: started
+        published_ports:
+          - 0.0.0.0:8090:8090
