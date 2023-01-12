@@ -19,7 +19,7 @@ pipeline {
         }  
         stage('Docker Build') {
             steps {
-                sh 'docker build -t cbabu85/devopsaddressbook .
+                sh 'docker build -t cbabu85/devopsaddressbook .'
             }
         }
         stage('Docker Push') {
