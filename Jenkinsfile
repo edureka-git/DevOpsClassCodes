@@ -19,7 +19,7 @@ pipeline {
         }  
         stage('Docker Build') {
             steps {
-                sh 'docker build -t devopscbabu/DevOpsAddressBook .
+                sh 'docker build -t cbabu85/devopsaddressbook .
             }
         }
         stage('Docker Push') {
@@ -27,7 +27,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
                 sh 'docker login -u cbabu85 -p ${dockerHubPwd}'
                   }
-                sh 'docker push devopscbabu/DevOpsAddressBook'
+                sh 'docker push cbabu85/devopsaddressbook'
                   }                                     
              }
          stage('Terraform init') {
