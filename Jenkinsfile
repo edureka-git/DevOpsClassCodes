@@ -38,7 +38,13 @@ pipeline {
          stage('Terraform Apply') {
              steps {
                  sh 'terraform apply --auto-approve'
+                 sleep 120
              }
          }
+        stage('Docker Deploy using Ansible') {
+             steps {
+                 ansiblePlaybook credentialsId: 'terraform-docker', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
+             }
+        }
      }
 }
