@@ -42,7 +42,7 @@ pipeline {
          stage('Terraform Apply') {
              steps {
                  sh 'terraform apply --auto-approve'
-                 sleep 120
+                 sleep 20
              }
          }
         stage('Docker Deploy using Ansible') {
