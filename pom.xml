@@ -13,8 +13,8 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-	<sonar.organization>devopscbabu</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+	// <sonar.organization>devopscbabu</sonar.organization>
+       // <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <repositories>
