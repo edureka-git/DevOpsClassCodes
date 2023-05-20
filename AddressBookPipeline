@@ -50,6 +50,11 @@ pipeline {
           sh 'mvn package'
         }
 	}
+	stage('Deploy onto Tomcat'){
+	steps {
+	deploy adapters: [tomcat9(credentialsId: 'b44146c4-c87e-40df-82ea-fffd91d21991', path: '', url: 'http://kslave1:8090')], contextPath: null, war: '**/*.war'
+	}
+	}
 
  }
     
