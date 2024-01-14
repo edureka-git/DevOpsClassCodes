@@ -1,5 +1,7 @@
 pipeline {
-    agent any 
+    agent {
+        label 'slave01'
+    }
     
     tools {
         maven 'mymaven'
@@ -20,6 +22,11 @@ pipeline {
             steps {
                 sh 'mvn pmd:pmd'
             }
+            post {
+  success {
+    recordIssues(tools: [pmdParser(pattern: '**/pmd.xml')])
+  }
+}
         }
         stage(UnitTesting){
             steps {
