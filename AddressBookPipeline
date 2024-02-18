@@ -1,0 +1,64 @@
+pipeline {
+
+    agent any
+    
+    stages {
+
+     stage('Clonerepo') {
+        steps {
+         git 'https://github.com/bhasker-manikyala/DevOpsClassCodes.git'
+        }
+
+     }
+     stage('Compile') {
+        steps {
+          sh 'mvn compile'
+        }
+     }
+     stage('CodeReview') {
+        steps {
+          sh 'mvn pmd:pmd'
+        }
+        post {
+           success {
+            recordIssues(tools: [pmdParser(pattern: '**/pmd.xml')])
+           }
+       }
+     }
+	 stage('UnitTesting') {
+        steps {
+          sh 'mvn test'
+        }
+        post {
+           success {
+            junit 'target/surefire-reports/*.xml'
+           }
+       }
+     }
+	 stage('CodeCoverage') {
+        steps {
+          sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+        }
+        post {
+           success {
+            cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/target/site/cobertura/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
+           }
+       }
+     }
+	 stage('Package') {
+        steps {
+          sh 'mvn package'
+        }
+	}
+	stage('Deploy onto Tomcat'){
+	steps {
+	deploy adapters: [tomcat9(credentialsId: 'b44146c4-c87e-40df-82ea-fffd91d21991', path: '', url: 'http://kslave1:8090')], contextPath: null, war: '**/*.war'
+	}
+	}
+
+ }
+    
+
+
+
+}
