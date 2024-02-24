@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+     
     
     tools {
+        jdk 'myjava'
         maven 'mymaven'
     }
+    agent none
     stages {
         stage('Clonerepo') {
             steps {
@@ -11,17 +13,45 @@ pipeline {
             }
         }
         stage('Compile') {
+        agent {label 'slave01' }
             steps {
                 sh 'mvn compile'
             }
         }
         stage('CodeReview') {
+        agent any   ---> Use this node as much as possible
             steps {
                 sh 'mvn pmd:pmd'
             }
             post {
                 success {
                     recordIssues(tools: [pmdParser(pattern: 'target/pmd.xml')])
+                }
+            }
+        }
+        stage('UnitTesting') {
+        agent {label 'slave01' }
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                success {
+                    junit stdioRetention: '', testResults: 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('CodeCoverage') {
+            steps {
+                sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+            }
+        }
+        stage('Package') {
+            steps {
+                sh 'mvn package'
+            }
+            post {
+                success {
+                    deploy adapters: [tomcat9(credentialsId: '77b5a14a-ec39-4339-bbee-b5f50fa36bd5', path: '', url: 'http://54.179.109.156:8090/')], contextPath: null, war: '**/*.war'
                 }
             }
         }
